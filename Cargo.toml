@@ -1,0 +1,22 @@
+[package]
+name = "actix_api_books"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+actix-web = "4"
+serde_json = "1.0"
+dotenv = "0.15.0"
+tracing = "0.1"
+uuid = { version = "0.8", features = ["serde", "v4"] }
+tracing-subscriber = "0.2"
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+serde_with = { version = "2", features = ["chrono_0_4"] }
+bson = { version = "2", features = ["chrono-0_4", "serde_with"] }
+futures = "0.3"
+
+[dependencies.mongodb]
+version = "2.2.0"
+default-features = false
+features = ["async-std-runtime"]
